@@ -56,6 +56,9 @@
                                                 <state key="normal" title="Choice A">
                                                     <color key="titleColor" red="1" green="0.85661839319999999" blue="0.1138562207" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VvD-C4-ZaU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-hn-Alk">
                                                 <rect key="frame" x="0.0" y="77.5" width="375" height="67"/>
