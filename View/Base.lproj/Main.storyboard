@@ -102,6 +102,9 @@
                             <constraint firstItem="dBd-hh-xA0" firstAttribute="top" secondItem="Elr-kK-XUJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wbD-uJ-jSZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="m3f-ti-482" id="gSc-iY-JvD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
