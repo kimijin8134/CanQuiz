@@ -23,6 +23,8 @@ class QuestionBank {
         list.append(item)
         
         list.append(Question(text:"When did the British North America Act come into effect?",choices: ["1871","1898","1867","1905"], correctAnswer: "1867"))
+        
+        list.append(Question(text:"Which port is the largest and busiest in Canada?", choices: ["The Port of Halifax","The Port of Montreal", "The Port of Vancouver","The Port of Victoria"], correctAnswer: "The Port of Vancouver"))
 
         
     }
