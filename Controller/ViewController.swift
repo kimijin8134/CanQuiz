@@ -40,7 +40,6 @@ class ViewController: UIViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         if let buttonTitle = sender.title(for: .normal){
             pickedAnswer = buttonTitle
-            print(pickedAnswer)
         }
         
         checkAnswer()
@@ -61,12 +60,23 @@ class ViewController: UIViewController {
         }
         
         else{
-            print("End of Quiz")
-            questionNumber = 0
+            let alert = UIAlertController(title: "Great", message: "You reached the end of the quiz, do you want to try again?", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { (UIAlertAction) in
+                self.startOver()
+            })
+            
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true, completion: nil)
+            
         }
 
     }
     
+    func startOver(){
+        questionNumber = 0
+        nextQuestion()
+    }
     
     func checkAnswer() {
         let currQuestion = questions.list[questionNumber]
