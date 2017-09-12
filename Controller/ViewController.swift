@@ -10,10 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressBar: UIView!
     @IBOutlet var Buttons: [UIButton]!
     let questions = QuestionBank()
     var pickedAnswer : String = ""
     var questionNumber : Int = 0
+    var score : Int = 0
+    var totalNumberOfQuestions : Int = 0
 
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -21,14 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let currQuestion = questions.list[questionNumber]
-        questionLabel.text = currQuestion.questionText
-        
-        for i in 0..<Buttons.count{
-            Buttons[i].setTitle(currQuestion.candidates[i], for: .normal)
-        }
-        
+        totalNumberOfQuestions = questions.list.count
+        nextQuestion()
         
     }
 
@@ -50,6 +48,12 @@ class ViewController: UIViewController {
         
     }
     
+    func updateUI(){
+        progressLabel.text = "\(questionNumber+1) / \(totalNumberOfQuestions)"
+        
+        progressBar.frame.size.width = (view.frame.size.width / CGFloat(totalNumberOfQuestions)) * CGFloat (questionNumber+1)
+    }
+    
     func nextQuestion(){
         if(questionNumber < questions.list.count){
             let currQuestion = questions.list[questionNumber]
@@ -57,6 +61,7 @@ class ViewController: UIViewController {
             for i in 0..<Buttons.count{
                 Buttons[i].setTitle(currQuestion.candidates[i], for: .normal)
             }
+            updateUI()
         }
         
         else{
@@ -85,6 +90,7 @@ class ViewController: UIViewController {
         if(pickedAnswer == correctAnswer)
         {
             print("You got it")
+            score = score + 1
         }
         
         else
