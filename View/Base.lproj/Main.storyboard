@@ -28,7 +28,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-kK-XUJ" userLabel="QuestionView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-hh-xA0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-hh-xA0">
                                         <rect key="frame" x="0.0" y="257" width="375" height="237"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -47,6 +47,7 @@
                                     <constraint firstItem="dBd-hh-xA0" firstAttribute="top" secondItem="Elr-kK-XUJ" secondAttribute="bottom" constant="-43" id="FU6-wr-RC3"/>
                                     <constraint firstItem="m3f-ti-482" firstAttribute="leading" secondItem="Elr-kK-XUJ" secondAttribute="leading" constant="16" id="QWD-5p-cOb"/>
                                     <constraint firstAttribute="bottom" secondItem="m3f-ti-482" secondAttribute="bottom" constant="27" id="g11-LW-WxU"/>
+                                    <constraint firstAttribute="bottom" secondItem="dBd-hh-xA0" secondAttribute="bottom" constant="-194" id="rDx-fP-WlH"/>
                                     <constraint firstItem="m3f-ti-482" firstAttribute="top" secondItem="Elr-kK-XUJ" secondAttribute="top" constant="28" id="rtw-dh-1X7"/>
                                     <constraint firstAttribute="trailing" secondItem="dBd-hh-xA0" secondAttribute="trailing" id="zkd-oM-SmW"/>
                                 </constraints>
@@ -120,14 +121,17 @@
                             <constraint firstItem="rwW-D4-F4l" firstAttribute="top" secondItem="u6v-JB-UcN" secondAttribute="top" constant="615" id="3BT-48-3kH"/>
                             <constraint firstItem="k0l-TW-fxp" firstAttribute="centerY" secondItem="u6v-JB-UcN" secondAttribute="centerY" constant="100" id="7qI-KV-Zqt"/>
                             <constraint firstAttribute="trailing" secondItem="Elr-kK-XUJ" secondAttribute="trailing" id="8Fe-9E-kPF"/>
+                            <constraint firstAttribute="trailing" secondItem="rwW-D4-F4l" secondAttribute="trailing" id="Beg-oi-hHq"/>
                             <constraint firstItem="Elr-kK-XUJ" firstAttribute="top" secondItem="u6v-JB-UcN" secondAttribute="top" id="CD8-VW-Y4L"/>
                             <constraint firstItem="SlH-QJ-MjM" firstAttribute="top" secondItem="rwW-D4-F4l" secondAttribute="bottom" id="FCP-Qh-cvE"/>
                             <constraint firstAttribute="trailing" secondItem="k0l-TW-fxp" secondAttribute="trailing" id="Gt6-pS-Yii"/>
                             <constraint firstAttribute="trailing" secondItem="rwW-D4-F4l" secondAttribute="trailing" id="PgG-p7-MO9"/>
+                            <constraint firstItem="SlH-QJ-MjM" firstAttribute="top" secondItem="rwW-D4-F4l" secondAttribute="bottom" id="S8H-g8-u00"/>
                             <constraint firstItem="Elr-kK-XUJ" firstAttribute="leading" secondItem="u6v-JB-UcN" secondAttribute="leading" id="VNA-1b-Nfb"/>
                             <constraint firstItem="rwW-D4-F4l" firstAttribute="leading" secondItem="u6v-JB-UcN" secondAttribute="leading" id="hI2-DS-0SI"/>
                             <constraint firstItem="k0l-TW-fxp" firstAttribute="leading" secondItem="u6v-JB-UcN" secondAttribute="leading" id="mm9-yU-33W"/>
                             <constraint firstItem="k0l-TW-fxp" firstAttribute="centerY" secondItem="u6v-JB-UcN" secondAttribute="centerY" constant="100" id="rbg-CQ-IC0"/>
+                            <constraint firstItem="rwW-D4-F4l" firstAttribute="leading" secondItem="u6v-JB-UcN" secondAttribute="leading" id="s6x-FC-Yx4"/>
                             <constraint firstItem="k0l-TW-fxp" firstAttribute="top" secondItem="u6v-JB-UcN" secondAttribute="top" constant="315" id="zM5-mj-G4K"/>
                         </constraints>
                     </view>
