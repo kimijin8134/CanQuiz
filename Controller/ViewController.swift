@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
     
@@ -60,8 +61,10 @@ class ViewController: UIViewController {
             questionLabel.text = currQuestion.questionText
             for i in 0..<Buttons.count{
                 Buttons[i].setTitle(currQuestion.candidates[i], for: .normal)
+                //Buttons[i].titleLabel!.numberOfLines = 1
+                //Buttons[i].titleLabel!.adjustsFontSizeToFitWidth = true
             }
-            updateUI()
+                updateUI()
         }
         
         else{
@@ -89,13 +92,16 @@ class ViewController: UIViewController {
         
         if(pickedAnswer == correctAnswer)
         {
-            print("You got it")
+            SVProgressHUD.showSuccess(withStatus: "Correct")
+            SVProgressHUD.dismiss(withDelay: 0.5)
             score = score + 1
+            
         }
         
         else
         {
-            print("Try again")
+           SVProgressHUD.showError(withStatus: "Wrong")
+           SVProgressHUD.dismiss(withDelay: 0.5)
         }
     }
     
