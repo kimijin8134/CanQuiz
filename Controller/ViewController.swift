@@ -61,8 +61,10 @@ class ViewController: UIViewController {
             questionLabel.text = currQuestion.questionText
             for i in 0..<Buttons.count{
                 Buttons[i].setTitle(currQuestion.candidates[i], for: .normal)
+                //Buttons[i].titleLabel!.numberOfLines = 1
+                //Buttons[i].titleLabel!.adjustsFontSizeToFitWidth = true
             }
-            updateUI()
+                updateUI()
         }
         
         else{
